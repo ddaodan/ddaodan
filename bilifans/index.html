@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>BILIBILI显示粉丝数</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
 </head>
 <body>
     <h1>BILIBILI显示粉丝数</h1>
@@ -10,11 +11,10 @@
     </div>
     <hr>
     <form action="./bilifans.html" name="a" onsubmit="return SubmitGet()">
-        <p>B站UID  <input type="text" name="uid" placeholder="UID" value="18985704"/></p>
+        <p>B站UID  <input type="text" name="uid" oninvalid="setCustomValidity('UID不能为空！')" placeholder="UID" required value="18985704"/></p>
         <p>刷新间隔<input type="number" name="time" placeholder="毫秒" value="10000"/></p>
-        <p>背景颜色<input type="text" name="color" placeholder="FFFFFF" value="000000"/>    <input type="button" id="show" value="调色板" /></p>
-        <input type="submit" value="生成" />
-        <span id="tips" style="color: red; font-weight: bold"></span><br>
+        <p>背景颜色<input type="text" name="color" oninvalid="setCustomValidity('颜色不能为空！')" placeholder="FFFFFF" required value="000000"/>    <input type="button" id="show" value="调色板" /></p>
+        <input id="button" type="submit" value="生成" /><br>
         <iframe id="nav" src="http://www.100sucai.com/online/5247/" frameborder="0" scrolling="no" style="width:300px; height: 450px; position:fixed;right:0;top:30%;display:none;"></iframe>
     </form>
     <hr>
@@ -42,18 +42,5 @@
             if(document.getElementById("nav").style.display = "none") document.getElementById("nav").style.display = "block";
             else document.getElementById("nav").style.display = "none"
         }
-    }
-    function SubmitGet() {
-        if (!a.uid.value) {
-            tips.innerText = "UID不能为空！"
-            a.uid.focus();
-            return false;
-        }
-        if (!a.color.value) {
-            tips.innerText = "颜色不能为空！"
-            a.color.focus();
-            return false;
-        }
-        return true;
     }
 </script>
