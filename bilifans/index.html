@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>BILIBILI显示粉丝数</title>
+</head>
+<body>
+    <h1>BILIBILI显示粉丝数</h1>
+    <a>用于显示BILIBILI的粉丝数，使用官方API</a>
+    <hr>
+    <h1>注意事项</h1>
+    <a>请注意请求的频率，太快会被封禁</a>
+    <hr>
+    <form action="./bilifans.html" name="a" onsubmit="return SubmitGet()">
+        <p>B站UID  <input type="text" name="uid" placeholder="UID"/></p>
+        <p>刷新间隔<input type="text" name="time" value="10000"/></p>
+        <p>背景颜色<input type="text" name="color" placeholder="#FFFFFF" value="#000000"/></p>
+        <input type="submit" value="生成" />
+        <span id="tips" style="color: red; font-weight: bold"></span>
+    </form>
+</body>
+
+<script>
+    function SubmitGet() {
+        if (!a.uid.value) {
+            tips.innerText = "UID不能为空！"
+            a.uid.focus();
+            return false;
+        }
+        if (!a.color.value) {
+            tips.innerText = "颜色不能为空！"
+            a.color.focus();
+            return false;
+        }
+        return true;
+    }
+</script>

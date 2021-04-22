@@ -16,7 +16,8 @@
         setTimeout(function () {
             location.reload()
         }, apaurl.time);
-        document.write("<img src = 'https://img.shields.io/badge/dynamic/json?logo=Bilibili&color=FF0000&label=bilibili&query=%24.data.follower&url=http://api.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D'+apaurl.uid+'&style=for-the-badge' width='500px' height='90px'>");
+        var img="<img src = 'https://img.shields.io/badge/dynamic/json?logo=Bilibili&color="+apaurl.color+"&label=bilibili&query=%24.data.follower&url=http://api.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D"+apaurl.uid+"&style=for-the-badge' width='500px' height='90px'>";
+        document.write(img);
     </script>
 </head>
 
