@@ -1,45 +1,55 @@
 <!DOCTYPE html>
+
 <head>
     <title>BILIBILI显示粉丝数</title>
-    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
-<body>
-    <h1>BILIBILI显示粉丝数</h1>
-    <a>用于显示BILIBILI的粉丝数，使用官方API</a>
-    <div>
-        <iframe src="bilifans.html?uid=18985704&time=99999&color=lightblue" frameBorder="0" width="500" scrolling="no" height="90"></iframe>
-    </div>
-    <hr>
-    <form action="./bilifans.html" name="a" onsubmit="return SubmitGet()">
-        <p>B站UID  <input type="text" name="uid" oninvalid="setCustomValidity('UID不能为空！')" placeholder="UID" required value="18985704"/></p>
-        <p>刷新间隔<input type="number" name="time" placeholder="毫秒" value="10000"/></p>
-        <p>背景颜色<input type="text" name="color" oninvalid="setCustomValidity('颜色不能为空！')" placeholder="FFFFFF" required value="000000"/>    <input type="button" id="show" value="调色板" /></p>
-        <input id="button" type="submit" value="生成" /><br>
-        <iframe id="nav" src="http://www.100sucai.com/online/5247/" frameborder="0" scrolling="no" style="width:300px; height: 450px; position:fixed;right:0;top:30%;display:none;"></iframe>
-    </form>
-    <hr>
-    <h1>注意事项</h1>
-    <a>请注意请求的频率，太快会被封禁</a><br>
-    <a>图片大小为500×90</a>
-    <hr>
-    <h1>快速访问</h1>
-    <a href="./bilifans.html?uid=12362451&time=10000&color=00FFFF">犬山玉姬Official</a>
-    <a href="./bilifans.html?uid=405981431&time=10000&color=white">白雪深白Official</a>
-    <a href="./bilifans.html?uid=419429042&time=10000&color=pink">爱宫Milk-Official</a>
-    <a href="./bilifans.html?uid=493724848&time=10000&color=purple">姬咲柚流Official</a>
-    <a href="./bilifans.html?uid=1644476000&time=10000&color=FF0000">鬼灯童搬运</a>
-    <br>
-    <hr>
-    <h1>关于</h1>
-    <p>后续可能会添加的功能：<br>自定义样式 更好的自动刷新（目前用的是定时刷新页面的方法，有时候会闪一下就是因为这个</p>
-    <a href="https://space.bilibili.com/18985704">作者的b站</a>
 
+<body>
+    <div style="text-align: center;">
+        <h1>BILIBILI显示粉丝数</h1>
+        <a>用于显示BILIBILI的粉丝数，使用官方API</a>
+        <div>
+            <iframe src="bilifans.html?uid=18985704&time=99999&color=lightblue" frameBorder="0" width="500"
+                scrolling="no" height="90"></iframe>
+        </div>
+        <hr>
+        <div>
+            <form action="./bilifans.html" name="a" onsubmit="return SubmitGet()">
+                <p>B站UID <input type="text" name="uid" oninvalid="setCustomValidity('UID不能为空！')" placeholder="UID"
+                        required value="18985704" /></p>
+                <p>刷新间隔<input type="number" name="time" placeholder="毫秒" value="10000" /></p>
+                <p>背景颜色<input type="text" name="color" oninvalid="setCustomValidity('颜色不能为空！')" placeholder="FFFFFF"
+                        required value="000000" /></p>
+                <input id="button" type="submit" value="生成" /> 
+                <input type="button" id="show" value="调色板" /><br>
+                <iframe id="nav" src="http://www.100sucai.com/online/5247/" frameborder="0" scrolling="no"
+                    style="width:300px; height: 450px; position:fixed;right:0;top:30%;display:none;"></iframe>
+            </form>
+        </div>
+        <hr>
+        <h1>注意事项</h1>
+        <a>请注意请求的频率，太快会被封禁</a><br>
+        <a>图片大小为500×90</a>
+        <hr>
+        <h1>快速访问</h1>
+        <a href="./bilifans.html?uid=12362451&time=10000&color=00FFFF">犬山玉姬Official</a>
+        <a href="./bilifans.html?uid=405981431&time=10000&color=white">白雪深白Official</a>
+        <a href="./bilifans.html?uid=419429042&time=10000&color=pink">爱宫Milk-Official</a>
+        <a href="./bilifans.html?uid=493724848&time=10000&color=purple">姬咲柚流Official</a>
+        <a href="./bilifans.html?uid=1644476000&time=10000&color=FF0000">鬼灯童搬运</a>
+        <br>
+        <hr>
+        <h1>关于</h1>
+        <p>后续可能会添加的功能：<br>自定义样式 更好的自动刷新（目前用的是定时刷新页面的方法，有时候会闪一下就是因为这个</p>
+        <a href="https://space.bilibili.com/18985704">作者的b站</a>
+    </div>
 </body>
 
 <script type="text/javascript">
-    window.onload = function(){
-        document.getElementById("show").onclick = function(){
-            if(document.getElementById("nav").style.display = "none") document.getElementById("nav").style.display = "block";
+    window.onload = function () {
+        document.getElementById("show").onclick = function () {
+            if (document.getElementById("nav").style.display = "none") document.getElementById("nav").style.display = "block";
             else document.getElementById("nav").style.display = "none"
         }
     }
