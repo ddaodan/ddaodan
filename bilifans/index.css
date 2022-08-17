@@ -30,6 +30,6 @@
     font-weight: 900;
     font-size:125%
 }
-input:required:invalid {
+/*input:required:invalid {
     background-color:rgb(255, 160, 160);
-}
+}*/
